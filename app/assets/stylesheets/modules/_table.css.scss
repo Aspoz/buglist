@@ -1,0 +1,47 @@
+.view-table {
+    display:table;
+    width:100%;
+}
+.view-row {
+    display:table-row;
+}
+.view-row > div {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+table {
+  border-collapse: collapse;
+  max-width: 100%;
+}
+.table {
+  color: $color-grey-dark;
+  width: 100%;
+
+  th,
+  td {
+    padding: 14px 0;
+    vertical-align: middle;
+  }
+
+  td.green {
+    color: $color-green-light !important;
+  }
+  td.red {
+    color: $color-red-light !important;
+  }
+  td.bold {
+    font-weight: $font-weight-bold !important;
+  }
+
+  thead > tr > th {
+    font-weight: normal;
+    text-align: left;
+  }
+
+  tbody > tr > td {
+    border: 1px solid $color-grey-light;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

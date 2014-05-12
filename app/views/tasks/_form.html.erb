@@ -1,0 +1,24 @@
+<%= form_for(@task) do |f| %>
+  <div class="form-field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+  <div class="form-field">
+    <%= f.label :note %>
+    <%= f.text_area :note %>
+  </div>
+  <div class="form-field">
+    <div class="checkbox">
+      <%= f.check_box :completed %>
+      <%= f.label :completed %>
+    </div>
+  </div>
+  <div class="form-field action">
+    <div class="default-1 small-1-2">
+      <%= f.submit class: 'btn green fullwidth' %>
+    </div>
+    <div class="default-1 small-1-2">
+      <%= link_to 'Cancel', tasks_path, class: 'btn grey fullwidth' %>
+    </div>
+  </div>
+<% end %>

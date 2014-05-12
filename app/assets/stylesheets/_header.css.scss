@@ -1,0 +1,37 @@
+.header-wrapper {
+  background: #FFF;
+  box-shadow: 0 3px 0 $color-grey-light;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.header-inner {
+  height: 70px;
+  position: relative;
+
+  @include respond-to(small) {
+    height: 80px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include respond-to(large) {
+    max-width: 1220px;
+  }
+}
+
+.logo {
+  position: absolute;
+  left: 50%;
+  margin-left: -18px;
+  top: 10px;
+  width: 36px;
+
+  @include respond-to(small) {
+    margin-left: -154px;
+    width: 306px;
+  }
+}

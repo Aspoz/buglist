@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Todoapp</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div class="wrapper">
+  <div class="header-wrapper">
+    <div class="header-inner">
+      <div class="logo">
+        <a href="<%= url_for root_path %>">
+          <div class="default-hide small-show">
+            <img src="<%= image_path('logo-big.svg') %>" alt="mijnwkpool" height='60'>
+          </div>
+          <div class="small-hide">
+            <img src="<%= image_path('logo-small.svg') %>" alt="mijnwkpool" height='50'>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="content-wrapper">
+    <%= yield %>
+  </div>
+</div>
+
+
+</body>
+</html>

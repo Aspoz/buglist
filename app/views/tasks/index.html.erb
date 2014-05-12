@@ -1,0 +1,57 @@
+<div class="grid-r">
+  <div class="small-1">
+    <div class="box">
+      <div class="content-header">
+        <h1>Bug List</h1>
+        <div class="form-search">
+          <%= form_for @task do |f| %>
+            <button class='green'>
+              <i class='fa fa-plus'></i>
+            </button>
+            <div>
+              <%= f.text_field :title, placeholder: 'Create new task' %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+      <div class="content">
+        <table class="table">
+          <% @tasks.each do |task| %>
+            <tr>
+              <td width="1" style="padding:0;">
+                <% if task.completed %>
+                  <%= link_to toggle_task_path(task), class:'btn checked', method: :patch do %>
+                    <i class="fa fa-check-circle"></i>
+                  <% end %>
+                <% else %>
+                  <%= link_to toggle_task_path(task), class:'btn check', method: :patch do %>
+                    <i class="fa fa-check-circle-o"></i>
+                  <% end %>
+                <% end %>
+              </td>
+              <td>
+                <h3><%= task.title %></h3>
+                <% if task.note %>
+                  <p><small><strong>Note:</strong> <%= task.note %></small></p>
+                <% end %>
+              </td>
+              <td width="1" style="padding:0;">
+                <%= link_to edit_task_path(task), class:'btn edit' do %>
+                  <i class="fa fa-edit"></i>
+                <% end %>
+              </td>
+              <td width="1" style="padding:0;">
+                <%= link_to task, class:'btn delete', method: :delete, :data => { :confirm => 'Are you sure?' } do %>
+                  <i class="fa fa-times"></i>
+                <% end %>
+                <!-- <a href="#" class="btn delete"><i class="fa fa-times"></i></a> -->
+              </td>
+            </tr>
+          <% end %>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+
