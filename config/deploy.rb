@@ -2,7 +2,7 @@
 lock '3.2.1'
 
 set :application, 'BugList'
-set :repo_url, 'git://github.com:Aspoz/buglist.git'
+set :repo_url, 'git@github.com:Aspoz/buglist.git'
 
 set :branch, 'master'
 set :deploy_to, '/var/www/mijnwkpool.com/buglist'
