@@ -17,6 +17,10 @@ group :development do
   gem 'capistrano-rbenv'
 end
 
+group :production do
+  gem 'pg'
+end
+
 gem 'quiet_assets', group: :development
 gem 'debugger', group: [:development, :test]
 
