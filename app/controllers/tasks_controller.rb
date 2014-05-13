@@ -2,9 +2,9 @@ class TasksController < ApplicationController
   before_action :set_task, only: [:edit, :update, :destroy, :toggle]
 
   def index
-    # @tasks_done = Task.where(completed: true).order(created_at: :desc)
-    # @tasks = Task.where(completed: false).order(created_at: :desc)
-    @tasks = Task.order(created_at: :desc)
+    @tasks_done = Task.where(completed: true).order(created_at: :desc)
+    @tasks = Task.where(completed: false).order(created_at: :desc)
+    # @tasks = Task.order(created_at: :desc)
     @task = Task.new
   end
 
