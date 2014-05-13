@@ -3,7 +3,7 @@ class TasksController < ApplicationController
 
   def index
     @tasks_done = Task.where(completed: true).order(updated_at: :desc)
-    @tasks = Task.where(completed: false).order(created_at: :desc)
+    @tasks = Task.where(completed: false).order(created_at: :asc)
     @task = Task.new
   end
 
