@@ -12,7 +12,7 @@
   </td>
   <td>
     <h3><%= task.title %></h3>
-    <% if task.note %>
+    <% if !task.note.blank? %>
       <p><small><strong>Note:</strong> <%= task.note %></small></p>
     <% end %>
   </td>
